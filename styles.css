@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Color Palette:
+Light Shades: #F4EEDC;
+Light Accent: #C7CED6;
+Main Brand Color: #475671;
+Dark Accent: #7E7C7F;
+Dark Shades: #2B3340;
+*/
+
+#titlename {
+    background-color: #C7CED6;
+    color: #2B3340;
+    padding: 10px;
+}
+
+body {
+    background-color: #F4EEDC;
+    font-family: monospace;
+    font-size: 16px;
+    color: #2B3340;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #C7CED6;
+    padding: 20px;
+    text-align: center;
+    color: #2B3340;
+}
+
+nav {
+    background-color: #475671;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #F4EEDC;
+    font-size: 18px;
+}
+
+.navbar li a:hover {
+    color: #C7CED6;
+}
+
+#profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#profile img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.column {
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.left {
+    background-color: #C7CED6;
+    width: 16.665%;
+}
+
+.middle {
+    background-color: #F4EEDC;
+    width: 66.66%;
+}
+
+.right {
+    background-color: #C7CED6;
+    width: 16.665%;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+    .left, .middle, .right {
+        width: 100%
+    }
+}
+
+footer {
+    background-color: #475671;
+    color: #F4EEDC;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #C7CED6;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #F4EEDC;
+}
+
+/* CONTACT FORM STYLING */
+.contact-section {
+    padding: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 2px solid #475671;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+/* BUTTON */
+.contact-form button {
+    background-color: #475671;
+    color: #F4EEDC;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* HOVER EFFECTS */
+.contact-form button:hover {
+    background-color: #2B3340;
+}
+
+a:hover, img:hover {
+    opacity: 0.8;
+}
+
+/* FOCUS STYLING */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 3px solid #C7CED6;
+}
+
+/* FLEXBOX FOR INTERESTS PAGE */
+
+.interests-container {
+    display: flex;
+    justify-content: space-around; /* even spacing */
+    align-items: center;           /* vertically centered */
+    gap: 20px;
+    padding: 20px;
+    background-color: #C7CED6;
+    height: 350px; /* required by assignment */
+}
+
+/* individual box styling */
+.box {
+    background-color: #F4EEDC;
+    color: #2B3340;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 20%;
+    text-align: center;
+}
+
+/* alternating color requirement */
+.box:nth-child(odd) {
+    background-color: #C7CED6;
+}
+
+.box:nth-child(even) {
+    background-color: #F4EEDC;
+}
+
+/* MOBILE RESPONSIVE REQUIREMENT */
+@media (max-width: 700px) {
+    .interests-container {
+        flex-direction: column;   /* stacks vertically */
+        height: auto;
+    }
+
+    .box {
+        width: 90%;
+    }
+}
+
+/* ACTIVE NAVBAR LINK */
+.navbar .active {
+    color: #C7CED6;        /* lighter color */
+    text-decoration: underline; /* underline the active page */
+    font-weight: bold;     /* optional but looks good */
+}

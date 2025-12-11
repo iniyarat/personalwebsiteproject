@@ -7,23 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Background particles -->
+    <canvas id="particles"></canvas>
+
     <header>
-        <h1>Iniya's Personal Website Project</h1>
+        <h1 class="gradient-text">Iniya's Personal Website Project</h1>
     </header>
-    <section id="profile">
-        <img src="yearbook.jpg">
-        <h2 id="titlename">Iniya Rathinakumar</h2>
-        <h3 id="titlename">Email: iniyarkumar@gmail.com</h3>
+
+    <section id="profile" class="fade-in">
+        <img src="yearbook.jpg" class="pfp">
+        <div>
+            <h2 id="titlename">Iniya Rathinakumar</h2>
+            <h3 id="titlename">Email: iniyarkumar@gmail.com</h3>
+        </div>
     </section>
+
     <nav>
-    <ul class="navbar">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="interests.html">Interests</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+        <ul class="navbar">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="interests.html">Interests</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cube.html">3D Cube</a></li>
+        </ul>
     </nav>
+
     <div class="container">
-        <div class="column left">
+        <div class="column left glass fade-in">
             <section id="skills">
                 <h2>Skills</h2>
                 <h4>Technical skills</h4>
@@ -44,29 +54,34 @@
                 </ol>
             </section>
         </div>
-        <div class = "column middle">
+
+        <div class="column middle glass fade-in">
             <section id="bio">
                 <h2>Biography</h2>
-                <p>I am always eager to earn, grow, and make a positive difference in my community. I have a strong interest in technology, leadership, and helping others, and I try to bring creativity and dedication into everything I do. Whether it’s through school activities, volunteering, or personal projects, I enjoy taking initiative and inspiring those around me to reach their potential.</p>
-                <p>In the future, I hope to continue developing my skills in computer science and technology while also using them to create meaningful impact. I want to work on projects that help people, whether through developing accessible tools, supporting education, or solving real-world problems with innovative solutions. My goal is not only to succeed in my chosen field but also to use my knowledge to make technology more inclusive and beneficial for everyone.</p>
-                <p>Beyond academics and career goals, I want to live a life centered on purpose, kindness, and growth. I hope to be a leader who uplifts others and contributes to positive change in both my local and global community. Through continuous learning, collaboration, and perseverance, I plan to build a future where I can combine my passions with service, leaving behind a meaningful legacy that inspires others to do the same.</p>
+                <p>I am always eager to learn, grow, and make a positive difference in my community...</p>
+                <p>In the future, I hope to continue developing my skills in computer science...</p>
+                <p>Beyond academics and career goals, I want to live a life centered on purpose...</p>
             </section>
         </div>
-        <div class = "column right">
+
+        <div class="column right glass fade-in">
             <section id="projects">
                 <h2>Projects</h2>
                 <ul>
-                    <li>AI Model - Developed an AI model and implemented it on a global platform for people to use.</li>
-                    <li>Web Development - Developed a website for my non-profit and launched it on the web</li>
-                    <li>Gold Award - Organized a large-scale project for helping kids with cancer</li>
+                    <li>AI Model - Developed an AI model...</li>
+                    <li>Web Development - Developed a site for my non-profit...</li>
+                    <li>Gold Award - Organized a large-scale project...</li>
                 </ul>
             </section>
         </div>
     </div>
-    <footer>
-        <p>See my <a href="./contact.html">Contact Information</a></p>
-        <p>See my <a href="./interests.html">Interests</a></p>
+
+    <footer class="fade-in">
+        <p>See my <a href="contact.html">Contact Information</a></p>
+        <p>See my <a href="interests.html">Interests</a></p>
         <p>&copy; 2025, Iniya Rathinakumar</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

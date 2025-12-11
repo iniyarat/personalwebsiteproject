@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0f17;
+    font-family: monospace;
+    color: white;
+    overflow: hidden;
+}
+
+/* NAVBAR – Matches your site */
+nav {
+    background-color: #222533;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 12px;
+    list-style: none;
+}
+
+.navbar a {
+    color: #dcdffa;
+    font-size: 18px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    color: #a5b4ff;
+}
+.navbar .active {
+    color: #7aa7ff;
+}
+
+/* Page Title */
+.title {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 40px;
+    background: linear-gradient(90deg, #7aa7ff, #c77dff, #ff85a2);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 300%;
+    animation: gradientShift 6s infinite linear;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0%; }
+    100% { background-position: 300%; }
+}
+
+/* 3D Cube Scene */
+.scene {
+    width: 300px;
+    height: 300px;
+    margin: 120px auto;
+    perspective: 1000px;
+}
+
+/* Cube */
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin 6s infinite linear;
+}
+
+/* Cube Faces */
+.face {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.07);
+    border: 2px solid rgba(255,255,255,0.25);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+/* Position each face */
+.front  { transform: rotateY(  0deg) translateZ(150px); }
+.back   { transform: rotateY(180deg) translateZ(150px); }
+.right  { transform: rotateY( 90deg) translateZ(150px); }
+.left   { transform: rotateY(-90deg) translateZ(150px); }
+.top    { transform: rotateX( 90deg) translateZ(150px); }
+.bottom { transform: rotateX(-90deg) translateZ(150px); }
+
+/* Spin Animation */
+@keyframes spin {
+    0%   { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* Background Particles */
+#particles {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+}
